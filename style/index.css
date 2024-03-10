@@ -1,0 +1,313 @@
+/* ============ Winter 2024 EECS 493 Assignment 3 Starter Code ============ */
+
+/* Main Containers */
+body,
+button {
+  font-family: VT323;
+}
+
+button {
+  font-size: xx-large;
+}
+
+.outer-container {
+  height: 720px;
+  width: 1280px;
+  background: #eee;
+  border: 5px solid gainsboro;
+}
+
+.game-window {
+  height: 720px;
+  width: 1280px;
+  float: left;
+  position: relative;
+  background-image: url('../src/frontpage_background.jpg');
+}
+
+/* Game Section */
+#actual-game {
+  height: 720px;
+  width: 1280px;
+  background-color: white;
+  z-index: 10;
+  right: 0px;
+  top: 0px;
+}
+
+.curAsteroid {
+  position: absolute;
+  height: 42px;
+  width: 42px;
+  z-index: 9;
+  right: 0px;
+  top: 0px;
+}
+
+.curAsteroid img {
+  position: relative;
+  z-index: 10;
+  height: 80px;
+  left: -17px;
+  top: -15px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.ship {
+  position: absolute;
+  height: 42px;
+  width: 42px;
+  z-index: 9;
+  right: 640px;
+  top: 360px;
+}
+
+#ship {
+  position: absolute;
+  height: 42px;
+  width: 42px;
+  z-index: 9;
+  right: 640px;
+  top: 360px;
+}
+
+.ship img {
+  position: relative;
+  z-index: 10;
+  height: 80px;
+  left: -17px;
+  top: -15px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.shield {
+  position: absolute;
+  height: 42px;
+  width: 42px;
+  z-index: 9;
+  right: 0px;
+  top: 0px;
+}
+
+.shield img {
+  position: relative;
+  z-index: 10;
+  height: 80px;
+  left: -17px;
+  top: -15px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.portal {
+  position: absolute;
+  height: 42px;
+  width: 42px;
+  z-index: 9;
+  right: 0px;
+  top: 0px;
+}
+
+.portal img {
+  position: relative;
+  z-index: 10;
+  height: 80px;
+  left: -17px;
+  top: -15px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* Add your stylings here */
+#main {
+  text-align: center;
+}
+
+#main-header {
+  width: 100%; /*percentage of outer container*/
+  height: 100px;
+  background-color: darkslateblue;
+  border-bottom: 6px;
+  border-bottom-style: groove;
+  font-size: 100px;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+#main-header img {
+  height: 100%;
+}
+
+#gameOver {
+  text-align: center;
+  display: none;
+  z-index: 11;
+  height: 100%;
+  background-image: url('../src/frontpage_background.jpg');
+  position: relative;
+  bottom: 100%;
+}
+
+#over-header {
+  width: 100%; /*percentage of outer container*/
+  height: 100px;
+  background-color: darkslateblue;
+  border-bottom: 6px;
+  border-bottom-style: groove;
+  font-size: 100px;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+#container {
+  background-color: darkslateblue;
+  color: white;
+  width: 40%;
+  height: 30%;
+  text-align: center;
+  font-size: 30px;
+  left: 30%;
+  top: 300px;
+  position: absolute;
+}
+
+#container button {
+  width: 30%;
+  text-align: center;
+  left: 35%;
+  position: relative;
+}
+
+#over-header img {
+  height: 100%;
+}
+
+#settings button {
+  width: 180px;
+  height: 100px;
+  background-color: purple;
+  color: white;
+}
+
+#main button {
+  margin-top: 135px;
+  width: 200px;
+  height: 100px;
+  background-color: darkslateblue;
+  color: white;
+  text-align: center;
+}
+
+#settings {
+  display: none;
+  height: 690px;
+  width: 600px;
+  background-color: darkslateblue;
+  border: 5px solid gainsboro;
+  position: relative;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 78.5%;
+  color: white
+}
+
+#tutorial {
+  display: none;
+  height: 100%;
+  background-color: gainsboro;
+  position: relative;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 80%;
+}
+
+#scorePanel {
+  display: none;
+  top: 0%;
+  right: 2%;
+  font-size: 55px;
+  position: absolute;
+  text-align: center;
+}
+
+#score {
+  color: darkblue;
+  font-size: 40px;
+}
+
+#level {
+  color: darkblue;
+  font-size: 40px;
+}
+
+#getReady {
+  display: none;
+  text-align: center;
+  font-size: 50px;
+  color: black;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  bottom: 7%;
+}
+
+#space {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#tutorial button {
+  width: 200px;
+  height: 75px;
+}
+
+#tutorial img {
+  width: 100px;
+}
+
+#difficultyBtns {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.selected {
+  border-style: solid;
+  border-color: gold;
+  border-width: 3px;
+}
+
+#settingsClose {
+  position: relative;
+  bottom: -18%;
+}
+
+#volume-slider {
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  width: 100%;
+  height: 25px;
+  accent-color: purple;
+}
+
+#italic {
+  font-weight: normal;
+  font-style: italic;
+}
+
+#unbold {
+  font-weight: normal;
+}
